@@ -44,9 +44,9 @@ export const ContactList = () => {
     )
   });
 
-  // if (isLoading()) {
-  //   return <Loading />;
-  // }
+  if (isLoading()) {
+    return <Loading />;
+  }
   return (
     <div>
       <div className="mt-10">

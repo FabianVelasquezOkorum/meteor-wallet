@@ -34,9 +34,13 @@ export const Wallet = () => {
       },
       (errorResponse) => {
         if (errorResponse) {
-          errorResponse.details?.forEach((error) => {
-            setErrorMessage(error.message);
-          });
+          if (errorResponse.details) {
+            errorResponse.details.forEach((error) => {
+              setErrorMessage(error.message);
+            });
+          } else {
+            setErrorMessage(errorResponse.error);
+          }
         } else {
           setOpen(false);
           setDestinationWallet({});

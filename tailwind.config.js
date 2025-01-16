@@ -1,3 +1,3 @@
 module.exports = {
-  content: ['./client/**/*.js', './imports/**/*.js', './client/*.html'],
+  content: ['./ui/**/*.js', './client/**/*.js', './client/**/*.html'],
 };

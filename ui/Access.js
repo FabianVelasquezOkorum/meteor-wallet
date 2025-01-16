@@ -38,7 +38,7 @@ export const Access = () => {
 
   return (
     <div className="flex flex-col items-center">
-      <h3 className="px-3 py-2 text-lg font-medium">
+      <h3 className="px-3 py-2 text-lg text-base font-medium">
         {isSignUp ? 'Sign Up' : 'Sign In'}
       </h3>
       {error && <ErrorAlert message={error.reason || 'Unknown error'} />}
@@ -111,6 +111,15 @@ export const Access = () => {
             {isSignUp
               ? 'If you already have an account, click here'
               : "If you don't an account, click here"}
+          </a>
+        </div>
+
+        <div className="py-3">
+          <a
+            className="cursor-pointer text-indigo-800"
+            onClick={() => navigate(RoutePaths.FORGOT_PASSWORD)}
+          >
+            Forgot password?
           </a>
         </div>
       </form>

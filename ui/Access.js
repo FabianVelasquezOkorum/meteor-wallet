@@ -38,7 +38,7 @@ export const Access = () => {
 
   return (
     <div className="flex flex-col items-center">
-      <h3 className="px-3 py-2 text-lg text-base font-medium">
+      <h3 className="px-3 py-2 text-lg font-medium">
         {isSignUp ? 'Sign Up' : 'Sign In'}
       </h3>
       {error && <ErrorAlert message={error.reason || 'Unknown error'} />}
